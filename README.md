@@ -1,2 +1,2 @@
 # deivoff.github.io
-Fronted-developer
+Frontend-developer

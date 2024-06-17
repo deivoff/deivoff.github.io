@@ -8,5 +8,12 @@
   ],
   "parserOptions": {
     "project": "./tsconfig.json"
+  },
+  "rules": {
+    "import/prefer-default-export": [
+      "off",
+      { "target": "any" }
+    ],
+    "react/function-component-definition": ["error", { "namedComponents": "arrow-function" }]
   }
 }

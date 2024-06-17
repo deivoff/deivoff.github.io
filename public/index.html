@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirect Page</title>
   <script>
-    const userLang = navigator.language || navigator.userLanguage;
-    if (userLang.startsWith('ru')) {
+    const userLanguages = navigator.languages || [navigator.language];
+    if (userLanguages.some(lang => lang.includes('ru'))) {
       window.location.href = "/ru";
     } else {
       window.location.href = "/en";

@@ -1,28 +1,29 @@
 import { dir } from 'i18next';
 import { ReactNode } from 'react';
-import { Metadata } from 'next';
+import i18n from '@/i18n';
+import { LayoutParams, Params } from './types';
 
 const languages = ['en', 'ru'];
 
-export const metadata: Metadata = {
-  title: 'Eugeny Mazurov',
+export const generateMetadata = ({ params: { lng } }: LayoutParams) => {
+  const t = i18n.getFixedT(lng);
+
+  return {
+    title: t('title'),
+  };
 };
 
-type Params = { lng: string };
-export function generateStaticParams(): Params[] {
-  return languages.map((lng) => ({ lng }));
-}
+export const generateStaticParams = (): Params[] =>
+  languages.map((lng) => ({ lng }));
 
-interface Props {
+interface Props extends LayoutParams {
   children: ReactNode;
-  params: Params;
 }
 
-export default function CVLayout({ children, params: { lng } }: Props) {
-  return (
-    <html lang={lng} dir={dir(lng)}>
-      <head />
-      <body>{children}</body>
-    </html>
-  );
-}
+const CVLayout = ({ children, params: { lng } }: Props) => (
+  <html lang={lng} dir={dir(lng)}>
+    <body>{children}</body>
+  </html>
+);
+
+export default CVLayout;

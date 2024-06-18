@@ -28,6 +28,9 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    environment: github-pages
+    env:
+      NEXT_PUBLIC_GTM: ${{ secrets.NEXT_PUBLIC_GTM }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -58,6 +61,9 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
+
+      - name: Test env
+        run: echo "$NEXT_PUBLIC_GTM"
 
       - name: Restore cache
         uses: actions/cache@v4

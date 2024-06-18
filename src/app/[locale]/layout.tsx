@@ -1,4 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl';
+import { GoogleTagManager } from '@next/third-parties/google';
 import {
   getMessages,
   getTranslations,
@@ -33,6 +34,9 @@ const LocaleLayout = async ({ children, params: { locale } }: Props) => {
 
   return (
     <html lang={locale} dir={dir(locale)}>
+      {process.env.NEXT_PUBLIC_GTM && (
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
+      )}
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}

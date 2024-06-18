@@ -1,4 +1,6 @@
-export type Params = { lng: string };
+export type Params = {
+  locale: string;
+};
 
 export type LayoutParams = {
   params: Params;

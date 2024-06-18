@@ -1,25 +1,14 @@
-import i18n from 'i18next';
-import common from '../locales/en/common.json';
-import ruCommon from '../locales/ru/common.json';
+import { notFound } from 'next/navigation';
+import { getRequestConfig } from 'next-intl/server';
 
-i18n
-  .use({
-    type: 'languageDetector',
-    detect: () => 'en',
-  })
-  .init({
-    ns: 'common',
-    resources: {
-      en: {
-        common,
-      },
-      ru: {
-        common: ruCommon,
-      },
-    },
-    interpolation: {
-      escapeValue: false, // not needed for react!!
-    },
-  });
+// Can be imported from a shared config
+export const locales = ['en', 'ru'];
 
-export default i18n;
+export default getRequestConfig(async ({ locale }) => {
+  // Validate that the incoming `locale` parameter is valid
+  if (!locales.includes(locale as any)) notFound();
+
+  return {
+    messages: (await import(`../messages/${locale}.json`)).default,
+  };
+});

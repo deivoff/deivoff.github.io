@@ -5,10 +5,20 @@ import {
   getTranslations,
   unstable_setRequestLocale,
 } from 'next-intl/server';
-import { ReactNode } from 'react';
+import { Montserrat } from 'next/font/google';
+import { PropsWithChildren } from 'react';
 import { dir } from 'i18next';
 import { locales } from '@/i18n';
 import { LayoutParams } from './types';
+
+import './globals.css';
+
+const montserrat = Montserrat({
+  variable: '--montserrat-font',
+  weight: ['400', '700'],
+  subsets: ['latin', 'cyrillic'],
+  display: 'swap',
+});
 
 export const generateStaticParams = () => locales.map((locale) => ({ locale }));
 
@@ -22,18 +32,17 @@ export const generateMetadata = async ({
   };
 };
 
-interface Props extends LayoutParams {
-  children: ReactNode;
-}
-
-const LocaleLayout = async ({ children, params: { locale } }: Props) => {
+const LocaleLayout = async ({
+  children,
+  params: { locale },
+}: PropsWithChildren<LayoutParams>) => {
   unstable_setRequestLocale(locale);
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
 
   return (
-    <html lang={locale} dir={dir(locale)}>
+    <html lang={locale} dir={dir(locale)} className={montserrat.variable}>
       {process.env.NEXT_PUBLIC_GTM && (
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
       )}

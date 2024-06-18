@@ -1,0 +1,6 @@
+@mixin paper {
+  background-color: var(--paper-color);
+  background-image: url("../../public/paper-texture.png");
+  background-size: 150px;
+  background-repeat: repeat;
+}

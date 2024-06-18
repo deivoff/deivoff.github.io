@@ -14,6 +14,9 @@
       "off",
       { "target": "any" }
     ],
+    "react/jsx-props-no-spreading": ["error", {
+      "html": "ignore"
+    }],
     "react/function-component-definition": ["error", { "namedComponents": "arrow-function" }]
   }
 }

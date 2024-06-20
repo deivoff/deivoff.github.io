@@ -2,34 +2,29 @@
   position: relative;
   display: grid;
   grid-template-areas: 't t t l' 's d d d' '. i i i';
-  grid-template-columns: 175px 1fr 1fr 1fr;
+  grid-template-columns: 240px 1fr 1fr 1fr;
+  column-gap: 56px;
 }
 
 .title {
   grid-area: t;
-  font-size: 40px;
-  line-height: 1.1;
-  font-weight: bold;
-  letter-spacing: 0.8px;
+  font: var(--typography-headline-large);
+  letter-spacing: 0.03em;
   margin-left: -2px;
   color: var(--gray2);
 }
 
 .subtitle {
   grid-area: s;
-  font-size: 18px;
+  font: var(--typography-headline-medium);
   color: var(--gray1);
-  letter-spacing: -0.5px;
+  letter-spacing: -0.01em;
 }
 
 .divider {
   align-self: center;
   grid-area: d;
   width: auto;
-  height: 1px;
-  margin-left: 20px;
-  margin-top: 2px;
-  background-color: var(--gray2);
 }
 
 .info {
@@ -40,8 +35,8 @@
 
 .circle {
   position: absolute;
-  top: -30px;
-  left: -30px;
+  top: -40px;
+  left: -40px;
 }
 
 .switcher {

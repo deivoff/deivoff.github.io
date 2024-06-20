@@ -1,0 +1,27 @@
+.root {
+  display: grid;
+
+  grid-template-areas: 't c' 'd c' '. c';
+  grid-template-columns: 130px 1fr;
+  column-gap: 20px;
+}
+
+.title {
+  grid-area: t;
+  font: var(--typography-subhead-medium);
+  color: var(--gray2);
+  width: 100px;
+  margin-top: -10px;
+}
+
+.divider {
+  grid-area: d;
+  width: 65px;
+  height: 2px;
+  margin-top: 15px;
+  background-color: var(--gray3);
+}
+
+.content {
+  grid-area: c;
+}

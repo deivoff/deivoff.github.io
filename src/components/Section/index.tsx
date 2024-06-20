@@ -1,12 +1,16 @@
-'use client';
+import clsx from 'clsx';
+import { HTMLProps } from 'react';
 
-import { useEffect, useState } from 'react';
+import styles from './index.module.scss';
 
-export const Section = () => {
-  const [counter, setCounter] = useState(0);
+interface Props extends HTMLProps<HTMLElement> {
+  title: string;
+}
 
-  useEffect(() => {
-    setCounter(1);
-  }, []);
-  return <div>{counter}</div>;
-};
+export const Section = ({ title, children, className, ...props }: Props) => (
+  <section className={clsx(styles.root, className)} {...props}>
+    <h2 className={styles.title}>{title}</h2>
+    <hr className={styles.divider} />
+    <div className={styles.content}>{children}</div>
+  </section>
+);

@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 import { Circle } from '../Circle';
+import { Line } from '../Line';
+import { Text } from '../Text';
 import styles from './index.module.scss';
 
 interface Props {
@@ -16,13 +18,13 @@ export const Header = ({ switcherHref }: Props) => {
       <h1 className={styles.title} itemProp="name">
         {t('title')}
       </h1>
-      <Link className={styles.switcher} href={switcherHref}>
+      <Text asComponent={Link} className={styles.switcher} href={switcherHref}>
         {t('lang')}
-      </Link>
+      </Text>
       <span className={styles.subtitle} itemProp="jobTitle">
         {t('subtitle')}
       </span>
-      <hr className={styles.divider} />
+      <Line className={styles.divider} type="header" />
       <div className={styles.info} />
       <div className={styles.info} />
       <div className={styles.info} />

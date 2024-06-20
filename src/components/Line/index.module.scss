@@ -1,0 +1,23 @@
+.root {
+  display: grid;
+  height: 2px;
+  width: 100%;
+}
+
+.section {
+  grid-template-columns: var(--large-grid);
+}
+
+.header {
+  grid-template-columns: 1fr 0;
+}
+
+.yellow {
+  height: inherit;
+  background-color: var(--accent1);
+}
+
+.gray {
+  height: inherit;
+  background-color: var(--gray2);
+}

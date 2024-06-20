@@ -1,7 +1,6 @@
 import './globals.css';
 
 import { GoogleTagManager } from '@next/third-parties/google';
-import { dir } from 'i18next';
 import { Montserrat } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import {
@@ -10,14 +9,15 @@ import {
   unstable_setRequestLocale,
 } from 'next-intl/server';
 import { PropsWithChildren } from 'react';
+import { getLangDir } from 'rtl-detect';
 
-import { locales } from '@/i18n';
+import { locales } from '@/dictionaries';
 
 import { LayoutParams } from './types';
 
 const montserrat = Montserrat({
   variable: '--montserrat-font',
-  weight: ['400', '700'],
+  weight: ['400', '600', '700'],
   subsets: ['latin', 'cyrillic'],
   display: 'swap',
 });
@@ -44,7 +44,11 @@ const LocaleLayout = async ({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} dir={dir(locale)} className={montserrat.variable}>
+    <html
+      lang={locale}
+      dir={getLangDir(locale)}
+      className={montserrat.variable}
+    >
       {process.env.NEXT_PUBLIC_GTM && (
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
       )}

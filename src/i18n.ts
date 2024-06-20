@@ -1,10 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getRequestConfig } from 'next-intl/server';
 
-// Can be imported from a shared config
-export const locales = ['en', 'ru'] as const;
-
-export type Locale = (typeof locales)[number];
+import { type Locale, locales } from '@/dictionaries';
 
 export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(locale as Locale)) notFound();

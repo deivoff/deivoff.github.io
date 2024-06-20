@@ -4,6 +4,37 @@
     "subtitle": "Frontend-developer",
     "title": "Eugeny Mazurov"
   },
+  "Index": {
+    "crtweb": {
+      "achievements": "",
+      "company": "crtweb",
+      "role": "Frontend-developer",
+      "state": "Tyumen",
+      "time": "06/2021 -\n03/2022"
+    },
+    "experience": "Work Experience",
+    "ozon": {
+      "achievements": "",
+      "company": "Ozon",
+      "role": "Frontend-developer",
+      "state": "Moscow",
+      "time": "06/2021 -\n03/2022"
+    },
+    "uula": {
+      "achievements": "",
+      "company": "UULA Technologies",
+      "role": "Senior Frontend-developer",
+      "state": "Kuwait",
+      "time": "03/2022 -\ncurrent time"
+    },
+    "yandex": {
+      "achievements": "",
+      "company": "Yandex",
+      "role": "Senior Frontend-developer",
+      "state": "Moscow",
+      "time": "06/2021 -\n03/2022"
+    }
+  },
   "Metadata": {
     "title": "Eugeny Mazurov | Frontend-developer"
   }

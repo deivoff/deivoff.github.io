@@ -3,10 +3,8 @@
 .root {
   @include paper;
 
-  font-family: var(--montserrat-font);
   max-width: var(--paper-width);
   width: var(--paper-width);
-  height: var(--paper-height);
-  padding: 60px 50px 60px 70px;
+  padding: 85px 70px 85px 95px;
   filter: drop-shadow(-15px 15px 30px rgba(0, 0, 0, 70%));
 }

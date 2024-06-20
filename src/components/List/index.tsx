@@ -9,6 +9,7 @@ interface Props<T extends 'ul' | 'ol' = 'ul'> extends HTMLProps<T> {
 }
 
 export const List = <T extends 'ul' | 'ol' = 'ul'>({
+  // @ts-ignore
   asComponent = 'ul',
   children,
   className,

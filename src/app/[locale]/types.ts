@@ -1,7 +1,7 @@
-import { Locales } from '@/i18n';
+import { Locale } from '@/i18n';
 
 export type Params = {
-  locale: Locales;
+  locale: Locale;
 };
 
 export type LayoutParams = {

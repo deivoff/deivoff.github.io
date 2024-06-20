@@ -1,5 +1,6 @@
-import { HTMLProps } from 'react';
 import clsx from 'clsx';
+import { HTMLProps } from 'react';
+
 import styles from './index.module.scss';
 
 export const Main = ({

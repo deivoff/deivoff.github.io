@@ -1,17 +1,19 @@
-import { NextIntlClientProvider } from 'next-intl';
+import './globals.css';
+
 import { GoogleTagManager } from '@next/third-parties/google';
+import { dir } from 'i18next';
+import { Montserrat } from 'next/font/google';
+import { NextIntlClientProvider } from 'next-intl';
 import {
   getMessages,
   getTranslations,
   unstable_setRequestLocale,
 } from 'next-intl/server';
-import { Montserrat } from 'next/font/google';
 import { PropsWithChildren } from 'react';
-import { dir } from 'i18next';
-import { locales } from '@/i18n';
-import { LayoutParams } from './types';
 
-import './globals.css';
+import { locales } from '@/i18n';
+
+import { LayoutParams } from './types';
 
 const montserrat = Montserrat({
   variable: '--montserrat-font',
@@ -19,8 +21,6 @@ const montserrat = Montserrat({
   subsets: ['latin', 'cyrillic'],
   display: 'swap',
 });
-
-export const generateStaticParams = () => locales.map((locale) => ({ locale }));
 
 export const generateMetadata = async ({
   params: { locale },
@@ -31,6 +31,8 @@ export const generateMetadata = async ({
     title: t('title'),
   };
 };
+
+export const generateStaticParams = () => locales.map((locale) => ({ locale }));
 
 const LocaleLayout = async ({
   children,

@@ -1,7 +1,7 @@
 .root {
   position: relative;
   display: grid;
-  grid-template-areas: 't t t t' 's d d d' '. i i i';
+  grid-template-areas: 't t t l' 's d d d' '. i i i';
   grid-template-columns: 175px 1fr 1fr 1fr;
 }
 
@@ -34,10 +34,19 @@
 
 .info {
   grid-area: i;
+
+  height: 48px;
 }
 
 .circle {
   position: absolute;
   top: -30px;
   left: -30px;
+}
+
+.switcher {
+  grid-area: l;
+  color: var(--gray1);
+  justify-self: flex-end;
+  align-self: center;
 }

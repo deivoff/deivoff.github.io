@@ -1,4 +1,4 @@
-import { Locale } from '@/i18n';
+import { Locale } from '@/dictionaries';
 
 export type Params = {
   locale: Locale;

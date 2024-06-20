@@ -4,7 +4,9 @@
     --paper-color: #E8E8E8;
 
     --accent1: #F0D516;
-    --accent2: #C7B128;
+    --accent-background: #C7B128;
+    --gray1: #1E1E1E;
+    --gray2: #262723;
     --gray-background: #2D3E50;
 }
 
@@ -12,7 +14,7 @@
     box-sizing: border-box;
 }
 
-html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video{
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video, hr{
     margin: 0;
     padding: 0;
     border: 0;

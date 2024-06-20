@@ -1,0 +1,16 @@
+$large-size: 125px;
+
+.root {
+  background-color: var(--accent1);
+  mix-blend-mode: multiply;
+  border-radius: 100%;
+}
+
+.medium {
+
+}
+
+.large {
+  width: $large-size;
+  height: $large-size;
+}

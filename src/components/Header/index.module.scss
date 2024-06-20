@@ -1,0 +1,43 @@
+.root {
+  position: relative;
+  display: grid;
+  grid-template-areas: 't t t t' 's d d d' '. i i i';
+  grid-template-columns: 175px 1fr 1fr 1fr;
+}
+
+.title {
+  grid-area: t;
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  margin-left: -2px;
+  color: var(--gray2);
+}
+
+.subtitle {
+  grid-area: s;
+  font-size: 18px;
+  color: var(--gray1);
+  letter-spacing: -0.5px;
+}
+
+.divider {
+  align-self: center;
+  grid-area: d;
+  width: auto;
+  height: 1px;
+  margin-left: 20px;
+  margin-top: 2px;
+  background-color: var(--gray2);
+}
+
+.info {
+  grid-area: i;
+}
+
+.circle {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+}

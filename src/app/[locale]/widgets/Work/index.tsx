@@ -15,9 +15,8 @@ interface Props {
 
 const format = { year: 'numeric', month: 'short' } as const;
 const item = (chunks: ReactNode) => <li>{chunks}</li>;
-const list = (chunks: ReactNode) => (
-  <List itemProp="description">{chunks}</List>
-);
+const list = (chunks: ReactNode) => <List>{chunks}</List>;
+
 export const Work = ({ company }: Props) => {
   const t = useTranslations(`Work.${company}`);
   const globalT = useTranslations('Work');
@@ -65,7 +64,7 @@ export const Work = ({ company }: Props) => {
             : formatter.dateTime(new Date(end), format)}
         </Text>
       </div>
-      <div className={s.description}>
+      <div className={s.description} itemProp="description">
         {t.rich('achievements', {
           item,
           list,

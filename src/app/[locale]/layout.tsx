@@ -12,7 +12,8 @@ import { getLangDir } from 'rtl-detect';
 
 import { locales } from '@/dictionaries';
 
-import Profile from '@/../public/profile.png';
+import Profile from '../../../public/profile.png';
+
 import { LayoutParams } from './types';
 
 import './globals.css';

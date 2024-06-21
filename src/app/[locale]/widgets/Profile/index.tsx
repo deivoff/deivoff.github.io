@@ -3,7 +3,8 @@ import { useTranslations } from 'next-intl';
 
 import { Subhead, Text } from '@/components';
 
-import ProfileImg from '@/../public/profile.png';
+import ProfileImg from '../../../../../public/profile.png';
+
 import s from './index.module.scss';
 
 export const Profile = () => {

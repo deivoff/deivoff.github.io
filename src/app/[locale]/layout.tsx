@@ -1,6 +1,4 @@
-import './globals.css';
-
-import { GoogleTagManager } from '@next/third-parties/google';
+import { PropsWithChildren } from 'react';
 import { Montserrat } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import {
@@ -8,12 +6,14 @@ import {
   getTranslations,
   unstable_setRequestLocale,
 } from 'next-intl/server';
-import { PropsWithChildren } from 'react';
+import { GoogleTagManager } from '@next/third-parties/google';
 import { getLangDir } from 'rtl-detect';
 
 import { locales } from '@/dictionaries';
 
 import { LayoutParams } from './types';
+
+import './globals.css';
 
 const montserrat = Montserrat({
   variable: '--montserrat-font',

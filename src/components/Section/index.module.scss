@@ -1,24 +1,26 @@
 .root {
   display: grid;
-
+  position: relative;
   grid-template-areas: 't c' 'd c' '. c';
   grid-template-columns: 131px 1fr;
   column-gap: 20px;
 }
 
 .title {
+  position: sticky;
+  inset-block-start: 20px;
   grid-area: t;
   font: var(--typography-subhead-medium);
   color: var(--gray2);
   width: 100px;
-  margin-top: -10px;
+  margin-block-start: -9px;
 }
 
 .divider {
   grid-area: d;
   width: 65px;
   height: 2px;
-  margin-top: 15px;
+  margin-block-start: 15px;
   background-color: var(--gray3);
 }
 

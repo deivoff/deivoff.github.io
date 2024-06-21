@@ -1,6 +1,6 @@
+import { ReactNode } from 'react';
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { ReactNode } from 'react';
 
 import {
   Background,
@@ -17,8 +17,9 @@ import {
 } from '@/components';
 import { companies, lastCompanies, locales } from '@/dictionaries';
 
-import styles from './index.module.scss';
 import { LayoutParams } from './types';
+
+import styles from './index.module.scss';
 
 const item = (chunks: ReactNode) => <li>{chunks}</li>;
 const list = (chunks: ReactNode) => (
@@ -142,6 +143,9 @@ const Index = ({ params: { locale } }: LayoutParams) => {
                   }
                 />
               ))}
+            </Section>
+            <Section title={t('education')}>
+              <Line />
             </Section>
           </Paper>
         </PaperContainer>

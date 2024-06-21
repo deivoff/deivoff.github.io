@@ -8,16 +8,16 @@
 
 .leftAngle {
   clip-path: polygon(0 0, 40vw 0, 0 40vh);
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
 
   &Parallelepiped {
     clip-path: polygon(30vw 0, 40vw 0, 0 40vh, 0 30vh);
 
     &Wrapper {
-      top: 0;
-      left: 0;
-      filter: drop-shadow(10px -5px 10px  rgba(0, 0, 0, 50%));
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      filter: drop-shadow(10px -5px 10px  rgb(0 0 0 / 50%));
     }
   }
 }

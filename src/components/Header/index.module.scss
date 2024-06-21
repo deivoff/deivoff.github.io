@@ -4,13 +4,14 @@
   grid-template-areas: 't t t l' 's d d d' '. i i i';
   grid-template-columns: 240px 1fr 1fr 1fr;
   column-gap: 56px;
+  margin-block-end: 65px;
 }
 
 .title {
   grid-area: t;
   font: var(--typography-headline-large);
   letter-spacing: 0.03em;
-  margin-left: -2px;
+  margin-inline-start: -2px;
   color: var(--gray2);
 }
 
@@ -29,19 +30,30 @@
 
 .info {
   grid-area: i;
-
-  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: var(--gray2);
+  padding-block: 0;
+  padding-inline: 10px;
 }
 
 .circle {
   position: absolute;
-  top: -40px;
-  left: -40px;
+  inset-block-start: -40px;
+  inset-inline-start: -40px;
 }
 
 .switcher {
   grid-area: l;
   color: var(--gray1);
-  justify-self: flex-end;
-  align-self: center;
+  place-self: center flex-end;
+}
+
+.social {
+  display: grid;
+  height: 40px;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: center;
 }

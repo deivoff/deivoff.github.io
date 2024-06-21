@@ -1,5 +1,5 @@
-import clsx from 'clsx';
 import { HTMLProps, ReactNode } from 'react';
+import clsx from 'clsx';
 
 import styles from './index.module.scss';
 

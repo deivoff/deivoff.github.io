@@ -4,6 +4,9 @@ import { useTranslations } from 'next-intl';
 import { Circle } from '../Circle';
 import { Line } from '../Line';
 import { Text } from '../Text';
+
+import { socials } from './socials';
+
 import styles from './index.module.scss';
 
 interface Props {
@@ -25,9 +28,22 @@ export const Header = ({ switcherHref }: Props) => {
         {t('subtitle')}
       </span>
       <Line className={styles.divider} type="header" />
-      <div className={styles.info} />
-      <div className={styles.info} />
-      <div className={styles.info} />
+      <ul className={styles.info}>
+        {socials.map(({ name, Icon, href }) => (
+          <li key={href} className={styles.social}>
+            <Icon />
+            <Text
+              asComponent="a"
+              href={href}
+              target="_blank"
+              itemProp="url"
+              rel="me"
+            >
+              {name}
+            </Text>
+          </li>
+        ))}
+      </ul>
     </header>
   );
 };

@@ -1,10 +1,11 @@
-@import "@/mixins/paper.scss";
+@import "@/mixins/paper";
 
 .root {
   @include paper;
 
   max-width: var(--paper-width);
   width: var(--paper-width);
-  padding: 85px 70px 85px 95px;
-  filter: drop-shadow(-15px 15px 30px rgba(0, 0, 0, 70%));
+  padding-block: 85px 95px;
+  padding-inline: 70px 85px;
+  filter: drop-shadow(-15px 15px 30px rgb(0 0 0 / 70%));
 }

@@ -1,7 +1,8 @@
-import clsx from 'clsx';
 import { HTMLProps } from 'react';
+import clsx from 'clsx';
 
 import { Text } from '../Text';
+
 import styles from './index.module.scss';
 
 interface Props<T extends 'ul' | 'ol' = 'ul'> extends HTMLProps<T> {

@@ -1,10 +1,10 @@
 .root {
-
   .root {
-    margin-left: 10px;
+    margin-inline-start: 10px;
   }
+
   li {
     list-style-type: "– ";
-    margin-bottom: 10px;
+    margin-block-end: 10px;
   }
 }

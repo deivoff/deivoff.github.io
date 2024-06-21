@@ -12,23 +12,24 @@
       "state": "Tyumen",
       "time": "06/2021 -\n03/2022"
     },
+    "education": "Education",
     "experience": "Work Experience",
     "ozon": {
-      "achievements": "",
+      "achievements": "<list><item>Reduced application deployment time by 65% through optimizing build and CI/CD configuration, speeding up deployment from 20 minutes to 7;</item><item>Implemented a smooth project migration from vanilla JS to TypeScript with automatic type generation from GraphQL schemas, enabling the smooth resolution of technical debt without any harm to the business;</item><item>Developed A/B testing deployment functionality based on internal B/G features;</item><item>Developed an internal node.js server for serving microdata for internal CRM links, additionally creating a gRPC client generator in TypeScript that automatically loads all necessary protobuf dependencies (both open and restricted to employees).</item></list>",
       "company": "Ozon",
       "role": "Frontend-developer",
       "state": "Moscow",
       "time": "06/2021 -\n03/2022"
     },
     "uula": {
-      "achievements": "",
+      "achievements": "<list><item>The development was carried out for Arabic-speaking countries, there was full support for layout for both regular and Arabic (right-to-left, rtl) interfaces;</item><item>Decomposed, described, and estimated tasks for the frontend team, distributed tasks among developers, and tracked their completion;</item><item>Completely reworked the internal DRM video player, one of the most important features on the platform. This significantly increased the player maintainability, for example, the subsequent redesign of the player was completed in two weeks instead of six, saving the team a month's work;</item><item>Supervised the development of a PDF file reader. By using js-macrotasks and virtualization to improve user experience with educational materials (>100-200 pages), the rendering time of files was reduced from 3 to 0.4 seconds, and text search time from 2 to 0.1 seconds;</item><item>Led team of the platform's technical debt. As part of the team's work:<list><item>Fixed CSP security issues in Next.js and implemented strictly typed routing, increasing reliability during feature development;</item><item>Consulted functional groups when facing challenges with advanced TypeScript, React features, and code design;</item><item>Completely reworked i18n translation dictionaries to optimize the application bundle size and facilitate smooth application expansion into other countries.</item></list></item></list>",
       "company": "UULA Technologies",
       "role": "Senior Frontend-developer",
       "state": "Kuwait",
       "time": "03/2022 -\ncurrent time"
     },
     "yandex": {
-      "achievements": "",
+      "achievements": "<list><item>Initiated and developed a solution for automatic documentation maintenance on user event analytics using Typescript AST, which reduced the monthly documentation support time from one to two days per month to a few seconds;</item><item>Fully developed new pages and sections within the Personal Account;</item><item>Implemented and was responsible for the operation of the internal acquiring widget in the Personal Account.</item></list>",
       "company": "Yandex",
       "role": "Senior Frontend-developer",
       "state": "Moscow",

@@ -47,7 +47,7 @@ export const Work = ({ company }: Props) => {
         {t('role')}
       </Subhead>
       <div
-        itemProp="worksFor"
+        itemProp="workFor"
         itemScope
         itemType="http://schema.org/Organization"
         className={s.work}

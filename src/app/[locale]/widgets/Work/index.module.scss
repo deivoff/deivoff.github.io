@@ -1,0 +1,25 @@
+.root {
+  display: grid;
+  grid-template-areas: 'w t' 'w d';
+  grid-template-columns: var(--large-grid);
+}
+
+.work {
+  grid-area: w;
+}
+
+.title {
+  grid-area: t;
+}
+
+.description {
+  grid-area: d;
+}
+
+.timeWrapper {
+  margin-block-start: 10px;
+}
+
+.time, .state, .timeWrapper {
+  font: var(--typography-text-paragraph-small);
+}

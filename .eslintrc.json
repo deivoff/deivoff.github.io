@@ -43,10 +43,7 @@
         ]
       }
     ],
-    "react/jsx-props-no-spreading": ["error", {
-      "html": "ignore",
-      "exceptions": ["Component", "Text"]
-    }],
+    "react/jsx-props-no-spreading": "off",
     "react/function-component-definition": ["error", { "namedComponents": "arrow-function" }],
     "react/require-default-props": "off"
   }

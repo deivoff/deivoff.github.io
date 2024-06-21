@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-import { Circle } from '../Circle';
-import { Line } from '../Line';
-import { Text } from '../Text';
+import { Circle, Line, Text } from '@/components';
 
 import { socials } from './socials';
 

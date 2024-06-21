@@ -1,6 +1,5 @@
 export * from './Background';
 export * from './Circle';
-export * from './Header';
 export * from './Line';
 export * from './List';
 export * from './Main';
@@ -9,4 +8,3 @@ export * from './PaperContainer';
 export * from './Section';
 export * from './Subhead';
 export * from './Text';
-export * from './TwoColumns';

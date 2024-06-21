@@ -30,6 +30,9 @@ export const generateMetadata = async ({
 
   return {
     title: t('title'),
+    verification: {
+      google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+    },
     openGraph: {
       type: 'profile',
       title: t('title'),

@@ -37,38 +37,17 @@ export const Work = ({ company }: Props) => {
         dateTime: end,
         itemProp: 'endDate',
       };
+  const organizationType = isCurrent ? 'worksFor' : 'alumniOf';
   return (
     <div
       className={s.root}
+      itemProp={organizationType}
       itemScope
-      itemType="http://schema.org/OrganizationRole"
+      itemType="https://schema.org/OrganizationRole"
     >
       <Subhead asComponent="h3" itemProp="roleName" className={s.title}>
         {t('role')}
       </Subhead>
-      <div
-        itemProp="workFor"
-        itemScope
-        itemType="http://schema.org/Organization"
-        className={s.work}
-      >
-        <Subhead asComponent="a" href={href} target="_blank" itemProp="url">
-          {t('company')}
-        </Subhead>
-        <div
-          itemProp="address"
-          itemScope
-          itemType="http://schema.org/PostalAddress"
-        >
-          <Text
-            asComponent="span"
-            itemProp="addressLocality"
-            className={s.state}
-          >
-            {t('state')}
-          </Text>
-        </div>
-      </div>
       <div className={s.timeWrapper}>
         <Text
           itemProp="startDate"
@@ -91,6 +70,29 @@ export const Work = ({ company }: Props) => {
           item,
           list,
         })}
+      </div>
+      <div
+        className={s.work}
+        itemScope
+        itemProp={organizationType}
+        itemType="https://schema.org/Organization"
+      >
+        <Subhead asComponent="a" href={href} target="_blank" itemProp="url">
+          <span itemProp="name">{t('company')}</span>
+        </Subhead>
+        <div
+          itemProp="address"
+          itemScope
+          itemType="http://schema.org/PostalAddress"
+        >
+          <Text
+            asComponent="span"
+            itemProp="addressLocality"
+            className={s.state}
+          >
+            {t('state')}
+          </Text>
+        </div>
       </div>
     </div>
   );

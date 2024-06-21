@@ -58,13 +58,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
-          cache: ${{ steps.deployment.outputs.page_url }}
+          cache: ${{ steps.detect-package-manager.outputs.manager }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Test env
-        run: echo "${{ steps.detect-package-manager.outputs.manager }}"
+        run: echo "${{ steps.deployment.outputs.page_url }}"
 
       - name: Restore cache
         uses: actions/cache@v4

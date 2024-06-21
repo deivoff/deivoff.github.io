@@ -1,11 +1,11 @@
-import styles from './index.module.scss';
+import s from './index.module.scss';
 
 export const Background = () => (
-  <div className={styles.background}>
-    <div className={styles.leftAngle} />
-    <div className={styles.leftAngleParallelepipedWrapper}>
-      <div className={styles.leftAngleParallelepiped} />
+  <div className={s.background}>
+    <div className={s.leftAngle} />
+    <div className={s.leftAngleParallelepipedWrapper}>
+      <div className={s.leftAngleParallelepiped} />
     </div>
-    <div className={styles.rightAngle} />
+    <div className={s.rightAngle} />
   </div>
 );

@@ -12,9 +12,9 @@ import {
 import { locales } from '@/dictionaries';
 
 import { LayoutParams } from './types';
-import { companies, Header, Work } from './widgets';
+import { companies, Header, Profile, Work } from './widgets';
 
-import styles from './page.module.scss';
+import s from './page.module.scss';
 
 const Index = ({ params: { locale } }: LayoutParams) => {
   unstable_setRequestLocale(locale);
@@ -30,10 +30,12 @@ const Index = ({ params: { locale } }: LayoutParams) => {
             <Header
               switcherHref={`/${locales.find((anotherLocale) => anotherLocale !== locale)}`}
             />
-            <Section />
+            <Section>
+              <Profile />
+            </Section>
             <Section title={t('experience')}>
               <Line />
-              <ol className={styles.companies}>
+              <ol className={s.companies}>
                 {companies.map((company) => (
                   <li key={company}>
                     <Work company={company} />

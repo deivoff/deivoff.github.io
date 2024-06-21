@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import styles from './index.module.scss';
+import s from './index.module.scss';
 
 interface Props {
   size?: 'medium' | 'large';
@@ -8,5 +8,5 @@ interface Props {
 }
 
 export const Circle = ({ size = 'medium', className }: Props) => (
-  <div className={clsx(styles[size], styles.root, className)} />
+  <div className={clsx(s[size], s.root, className)} />
 );

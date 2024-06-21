@@ -1,7 +1,7 @@
 import { ElementType, HTMLProps } from 'react';
 import clsx from 'clsx';
 
-import styles from './index.module.scss';
+import s from './index.module.scss';
 
 interface Props<T extends ElementType = 'p'> extends HTMLProps<T> {
   asComponent?: ElementType;
@@ -13,7 +13,7 @@ export const Text = <T extends ElementType = 'p'>({
   className,
   ...props
 }: Props<T>) => (
-  <Component className={clsx(styles.root, className)} {...props}>
+  <Component className={clsx(s.root, className)} {...props}>
     {children}
   </Component>
 );

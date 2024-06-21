@@ -1,4 +1,9 @@
-.root {
+.small {
   font: var(--typography-subhead-small);
   color: var(--gray1);
+}
+
+.medium {
+  font: var(--typography-subhead-medium);
+  color: var(--gray2);
 }

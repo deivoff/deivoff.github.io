@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 import { Text } from '../Text';
 
-import styles from './index.module.scss';
+import s from './index.module.scss';
 
 interface Props<T extends 'ul' | 'ol' = 'ul'> extends HTMLProps<T> {
   asComponent?: T;
@@ -18,7 +18,7 @@ export const List = <T extends 'ul' | 'ol' = 'ul'>({
 }: Props<T>) => (
   <Text
     asComponent={asComponent}
-    className={clsx(styles.root, className)}
+    className={clsx(s.root, className)}
     {...props}
   >
     {children}

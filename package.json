@@ -8,8 +8,8 @@
     "start": "next start ",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "lint:styles": "stylelint \"**/*.{scss,css}\"",
-    "lint:styles:fix": "stylelint \"**/*.{scss,css}\" --fix"
+    "lint:styles": "stylelint \"src/**/*.{scss,css}\"",
+    "lint:styles:fix": "stylelint \"src/**/*.{scss,css}\" --fix"
   },
   "dependencies": {
     "@next/third-parties": "^14.2.4",

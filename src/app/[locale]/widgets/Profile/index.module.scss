@@ -1,0 +1,33 @@
+.content {
+  display: grid;
+  grid-template-columns: var(--large-grid);
+  margin-block-end: 60px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: var(--large-grid);
+  gap: 20px;
+  margin-block-end: 25px;
+}
+
+.img {
+  justify-self: center;
+}
+
+.title {
+  position: relative;
+  margin-inline-start: 30px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: -15px;
+    inset-block-start: calc(50% - 2px);
+    z-index: -1;
+    height: 8px;
+    width: 100%;
+    background-color: var(--accent1);
+    mix-blend-mode: multiply;
+  }
+}

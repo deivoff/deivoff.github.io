@@ -5,7 +5,7 @@ import { Circle, Line, Text } from '@/components';
 
 import { socials } from './socials';
 
-import styles from './index.module.scss';
+import s from './index.module.scss';
 
 interface Props {
   switcherHref: string;
@@ -14,21 +14,21 @@ interface Props {
 export const Header = ({ switcherHref }: Props) => {
   const t = useTranslations('Header');
   return (
-    <header className={styles.root}>
-      <Circle size="large" className={styles.circle} />
-      <h1 className={styles.title} itemProp="name">
+    <header className={s.root}>
+      <Circle size="large" className={s.circle} />
+      <h1 className={s.title} itemProp="name">
         {t('title')}
       </h1>
-      <Text asComponent={Link} className={styles.switcher} href={switcherHref}>
+      <Text asComponent={Link} className={s.switcher} href={switcherHref}>
         {t('lang')}
       </Text>
-      <span className={styles.subtitle} itemProp="jobTitle">
+      <span className={s.subtitle} itemProp="jobTitle">
         {t('subtitle')}
       </span>
-      <Line className={styles.divider} type="header" />
-      <ul className={styles.info}>
+      <Line className={s.divider} type="header" />
+      <ul className={s.info}>
         {socials.map(({ name, Icon, href }) => (
-          <li key={href} className={styles.social}>
+          <li key={href} className={s.social}>
             <Icon />
             <Text
               asComponent="a"

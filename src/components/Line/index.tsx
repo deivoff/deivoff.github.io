@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import styles from './index.module.scss';
+import s from './index.module.scss';
 
 interface Props {
   type?: 'short' | 'section' | 'header';
@@ -8,8 +8,8 @@ interface Props {
 }
 
 export const Line = ({ type = 'section', className }: Props) => (
-  <div className={clsx(styles.root, styles[type], className)}>
-    <div className={styles.gray} />
-    <div className={styles.yellow} />
+  <div className={clsx(s.root, s[type], className)}>
+    <div className={s.gray} />
+    <div className={s.yellow} />
   </div>
 );

@@ -5,7 +5,7 @@ import { List, Subhead, Text } from '@/components';
 
 import { companiesMeta, type Company } from './companies';
 
-import styles from './index.module.scss';
+import s from './index.module.scss';
 
 export { companies } from './companies';
 
@@ -38,15 +38,15 @@ export const Work = ({ company }: Props) => {
         itemProp: 'endDate',
       };
   return (
-    <div className={styles.root}>
-      <Subhead asComponent="h3" itemProp="jobTitle" className={styles.title}>
+    <div className={s.root}>
+      <Subhead asComponent="h3" itemProp="jobTitle" className={s.title}>
         {t('role')}
       </Subhead>
       <div
         itemProp="worksFor"
         itemScope
         itemType="http://schema.org/Organization"
-        className={styles.work}
+        className={s.work}
       >
         <Subhead asComponent="a" href={href} target="_blank" itemProp="name">
           {t('company')}
@@ -59,15 +59,15 @@ export const Work = ({ company }: Props) => {
           <Text
             asComponent="span"
             itemProp="addressLocality"
-            className={styles.state}
+            className={s.state}
           >
             {t('state')}
           </Text>
         </div>
-        <div className={styles.timeWrapper}>
+        <div className={s.timeWrapper}>
           <Text
             itemProp="startDate"
-            className={styles.time}
+            className={s.time}
             asComponent="time"
             dateTime={start}
           >
@@ -75,14 +75,14 @@ export const Work = ({ company }: Props) => {
           </Text>
           &nbsp;-
           <br />
-          <Text {...endProps} className={styles.time}>
-            {end
-              ? formatter.dateTime(new Date(end), format)
-              : globalT('currentTime')}
+          <Text {...endProps} className={s.time}>
+            {isCurrent
+              ? globalT('currentTime')
+              : formatter.dateTime(new Date(end), format)}
           </Text>
         </div>
       </div>
-      <div className={styles.description}>
+      <div className={s.description}>
         {t.rich('achievements', {
           item,
           list,

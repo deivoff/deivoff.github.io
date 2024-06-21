@@ -37,13 +37,6 @@ export const generateMetadata = async ({
       type: 'profile',
       title: t('title'),
       locale,
-      images: [
-        {
-          width: 50,
-          height: 50,
-          url: '/profile.png',
-        },
-      ],
       firstName: t('firstName'),
       lastName: t('lastName'),
       username: 'deivoff',

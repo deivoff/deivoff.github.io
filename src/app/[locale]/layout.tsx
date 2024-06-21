@@ -12,6 +12,8 @@ import { getLangDir } from 'rtl-detect';
 
 import { locales } from '@/dictionaries';
 
+import Profile from '../../../public/profile.png';
+
 import { LayoutParams } from './types';
 
 import './globals.css';
@@ -37,6 +39,13 @@ export const generateMetadata = async ({
       type: 'profile',
       title: t('title'),
       locale,
+      images: [
+        {
+          url: Profile.src,
+          width: 50,
+          height: 50,
+        },
+      ],
       firstName: t('firstName'),
       lastName: t('lastName'),
       username: 'deivoff',

@@ -1,6 +1,6 @@
 .root {
   display: grid;
-  grid-template-areas: 'w t' 'w d';
+  grid-template-areas: 'w r' 'w d' 't d' '. d';
   grid-template-columns: var(--large-grid);
 }
 
@@ -9,7 +9,7 @@
 }
 
 .title {
-  grid-area: t;
+  grid-area: r;
 }
 
 .description {
@@ -17,6 +17,7 @@
 }
 
 .timeWrapper {
+  grid-area: t;
   margin-block-start: 10px;
 }
 

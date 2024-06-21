@@ -1,4 +1,5 @@
 import { PropsWithChildren } from 'react';
+import { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import {
@@ -24,11 +25,26 @@ const montserrat = Montserrat({
 
 export const generateMetadata = async ({
   params: { locale },
-}: LayoutParams) => {
+}: LayoutParams): Promise<Metadata> => {
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   return {
     title: t('title'),
+    openGraph: {
+      type: 'profile',
+      title: t('title'),
+      locale,
+      images: [
+        {
+          width: 50,
+          height: 50,
+          url: '/profile.png',
+        },
+      ],
+      firstName: t('firstName'),
+      lastName: t('lastName'),
+      username: 'deivoff',
+    },
   };
 };
 

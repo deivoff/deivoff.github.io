@@ -38,8 +38,12 @@ export const Work = ({ company }: Props) => {
         itemProp: 'endDate',
       };
   return (
-    <div className={s.root}>
-      <Subhead asComponent="h3" itemProp="jobTitle" className={s.title}>
+    <div
+      className={s.root}
+      itemScope
+      itemType="http://schema.org/OrganizationRole"
+    >
+      <Subhead asComponent="h3" itemProp="roleName" className={s.title}>
         {t('role')}
       </Subhead>
       <div
@@ -48,7 +52,7 @@ export const Work = ({ company }: Props) => {
         itemType="http://schema.org/Organization"
         className={s.work}
       >
-        <Subhead asComponent="a" href={href} target="_blank" itemProp="name">
+        <Subhead asComponent="a" href={href} target="_blank" itemProp="url">
           {t('company')}
         </Subhead>
         <div
@@ -64,23 +68,23 @@ export const Work = ({ company }: Props) => {
             {t('state')}
           </Text>
         </div>
-        <div className={s.timeWrapper}>
-          <Text
-            itemProp="startDate"
-            className={s.time}
-            asComponent="time"
-            dateTime={start}
-          >
-            {formatter.dateTime(new Date(start), format)}
-          </Text>
-          &nbsp;-
-          <br />
-          <Text {...endProps} className={s.time}>
-            {isCurrent
-              ? globalT('currentTime')
-              : formatter.dateTime(new Date(end), format)}
-          </Text>
-        </div>
+      </div>
+      <div className={s.timeWrapper}>
+        <Text
+          itemProp="startDate"
+          className={s.time}
+          asComponent="time"
+          dateTime={start}
+        >
+          {formatter.dateTime(new Date(start), format)}
+        </Text>
+        &nbsp;-
+        <br />
+        <Text {...endProps} className={s.time}>
+          {isCurrent
+            ? globalT('currentTime')
+            : formatter.dateTime(new Date(end), format)}
+        </Text>
       </div>
       <div className={s.description}>
         {t.rich('achievements', {

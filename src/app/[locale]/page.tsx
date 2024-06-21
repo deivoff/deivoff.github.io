@@ -33,7 +33,7 @@ const Index = ({ params: { locale } }: LayoutParams) => {
             <Section>
               <Profile />
             </Section>
-            <Section title={t('experience')}>
+            <Section title={t('experience')} itemProp="worksFor">
               <Line />
               <ol className={s.companies}>
                 {companies.map((company) => (

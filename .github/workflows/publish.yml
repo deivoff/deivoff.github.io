@@ -64,7 +64,7 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Test env
-        run: echo "$NEXT_PUBLIC_GTM"
+        run: echo "${{ steps.detect-package-manager.outputs.manager }}"
 
       - name: Restore cache
         uses: actions/cache@v4

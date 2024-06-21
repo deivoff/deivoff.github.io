@@ -12,8 +12,7 @@ import { getLangDir } from 'rtl-detect';
 
 import { locales } from '@/dictionaries';
 
-import Profile from '../../../public/profile.png';
-
+import Profile from '@/../public/profile.png';
 import { LayoutParams } from './types';
 
 import './globals.css';
@@ -35,6 +34,9 @@ export const generateMetadata = async ({
     verification: {
       google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
     },
+    metadataBase: process.env.NEXT_PUBLIC_SITE_URL
+      ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
+      : null,
     openGraph: {
       type: 'profile',
       title: t('title'),

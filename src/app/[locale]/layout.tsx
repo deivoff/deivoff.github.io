@@ -76,6 +76,16 @@ const LocaleLayout = async ({
       {process.env.NEXT_PUBLIC_GTM && (
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
       )}
+      {locales
+        .filter((l) => l !== locale)
+        .map((alternativeLocale) => (
+          <link
+            key={alternativeLocale}
+            rel="alternate"
+            lang={alternativeLocale}
+            href={`/${alternativeLocale}`}
+          />
+        ))}
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}

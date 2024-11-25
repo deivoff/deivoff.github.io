@@ -14,7 +14,7 @@
     "title": "Eugeny Mazurov | Frontend-developer"
   },
   "Profile": {
-    "description": "8+ years of web development experience (mainly frontend, but also tackled interesting backend tasks).\nMain stack includes React, TypeScript, and other core development tools.\nIn addition to daily tasks such as developing dashboards/landing pages/forms, I have also tackled unique interface tasks, such as developing video and PDF players, analyzing code based on TypeScript AST, and ensuring comprehensive testing using Jest and Cypress. I have skills in full support of frontend project infrastructure, including working with CI/CD, Docker, and NGINX.\n\nIn every team I've worked with, I have had the highest level of expertise in TypeScript.\n\nI have experience in team management as a senior developer, as well as mentoring juniors. I decomposed and tracked task completion statuses.",
+    "description": "{years}+ years of web development experience (mainly frontend, but also tackled interesting backend tasks).\nMain stack includes React, TypeScript, and other core development tools.\nIn addition to daily tasks such as developing dashboards/landing pages/forms, I have also tackled unique interface tasks, such as developing video and PDF players, analyzing code based on TypeScript AST, and ensuring comprehensive testing using Jest and Cypress. I have skills in full support of frontend project infrastructure, including working with CI/CD, Docker, and NGINX.\n\nIn every team I've worked with, I have had the highest level of expertise in TypeScript.\n\nI have experience in team management as a senior developer, as well as mentoring juniors. I decomposed and tracked task completion statuses.",
     "title": "Profile"
   },
   "Work": {

@@ -9,7 +9,7 @@ import s from './index.module.scss';
 
 export const Profile = () => {
   const t = useTranslations('Profile');
-
+  const years = new Date().getFullYear() - 2016;
   return (
     <div className={s.root}>
       <div className={s.header}>
@@ -28,7 +28,7 @@ export const Profile = () => {
           className={s.img}
         />
         <Text itemProp="description" asComponent="p">
-          {t('description')}
+          {t('description', { years })}
         </Text>
       </div>
     </div>

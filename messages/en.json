@@ -31,6 +31,12 @@
       "role": "Frontend-developer",
       "state": "Moscow"
     },
+    "vk": {
+      "achievements": "Will be added soon",
+      "company": "VK",
+      "role": "Senior Frontend-developer",
+      "state": "Moscow"
+    },
     "uula": {
       "achievements": "<list><item>The development was carried out for Arabic-speaking countries, there was full support for layout for both regular and Arabic (right-to-left, rtl) interfaces;</item><item>Decomposed, described, and estimated tasks for the frontend team, distributed tasks among developers, and tracked their completion;</item><item>Completely reworked the internal DRM video player, one of the most important features on the platform. This significantly increased the player maintainability, for example, the subsequent redesign of the player was completed in two weeks instead of six, saving the team a month's work;</item><item>Supervised the development of a PDF file reader. By using js-macrotasks and virtualization to improve user experience with educational materials (>100-200 pages), the rendering time of files was reduced from 3 to 0.4 seconds, and text search time from 2 to 0.1 seconds;</item><item>Led team of the platform's technical debt. As part of the team's work:<list><item>Fixed CSP security issues in Next.js and implemented strictly typed routing, increasing reliability during feature development;</item><item>Consulted functional groups when facing challenges with advanced TypeScript, React features, and code design;</item><item>Completely reworked i18n translation dictionaries to optimize the application bundle size and facilitate smooth application expansion into other countries.</item></list></item></list>",
       "company": "UULA Technologies",

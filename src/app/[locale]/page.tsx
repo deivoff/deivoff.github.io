@@ -43,7 +43,6 @@ const Index = ({ params: { locale } }: LayoutParams) => {
                 ))}
               </ol>
             </Section>
-            <Section title={t('education')} />
           </Paper>
         </PaperContainer>
       </Main>
